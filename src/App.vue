@@ -38,7 +38,7 @@ import { IonContent, IonPage, IonIcon, IonItem, IonLabel, IonList, IonListHeader
 import { defineComponent, ref } from 'vue';
 import { peopleOutline, homeOutline, helpCircleOutline } from 'ionicons/icons';
 export default defineComponent({
-  name: 'App',
+
 ionViewDidEnter() {
     console.log('Home page did enter');
   },
