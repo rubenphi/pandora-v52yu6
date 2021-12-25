@@ -8,15 +8,15 @@
             <ion-note>Espero que la clase de hoy sea estupenda</ion-note>
 
             <ion-menu-toggle auto-hide="false" >
-              <ion-item @click="selectedIndex = i" lines="none" class="hydrated" :class="{ selected: selectedIndex === i }">
+              <ion-item @click="checked = 'Home'" lines="none" class="hydrated" :class="{ selected: checked == 'Home' }">
                 <ion-icon slot="start" :icon="homeOutline"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
-              <ion-item @click="selectedIndex = i" lines="none" class="hydrated" :class="{ selected: selectedIndex === i }">
+              <ion-item @click="checked = 'Grupo'" lines="none" class="hydrated" :class="{ selected: selectedIndex == 'Grupo' }">
                 <ion-icon slot="start" :icon="peopleOutline"></ion-icon>
                 <ion-label>Grupo</ion-label>
               </ion-item>
-              <ion-item @click="selectedIndex = i" lines="none" detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
+              <ion-item @click="checked = 'Cuestionarios'" lines="none" detail="false" class="hydrated" :class="{ selected: selectedIndex == 'Cuestionarios' }">
                 <ion-icon slot="start" :icon="helpCircleOutline"></ion-icon>
                 <ion-label>Cuestionarios</ion-label>
               </ion-item>
@@ -52,6 +52,7 @@ export default defineComponent({
     IonSplitPane,
   },
   setup() {
+    const checked = 'Home';
     const selectedIndex = ref(0);
     const appPages = [
       {
@@ -101,6 +102,7 @@ export default defineComponent({
     const route = useRoute();
     
     return { 
+      checked,
       selectedIndex,
       appPages, 
       labels,
