@@ -12,7 +12,7 @@
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">{{ $route.params.id }}</ion-title>
+          <ion-title size="large">Pandora</ion-title>
         </ion-toolbar>
       </ion-header>
     
