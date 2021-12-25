@@ -58,7 +58,9 @@ export default defineComponent({
     console.log('Home page did leave');
   },
   ionViewWillEnter() {
-   console.log(this.contador);
+   this.contador = setInterval(()=>{ this.contador ++
+    }, 1000)
+    console.log(this.contador);
   },
   ionViewWillLeave() {
     console.log('Home page will leave');
