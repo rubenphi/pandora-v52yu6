@@ -103,6 +103,7 @@ export default defineComponent({
       archiveOutline, 
       archiveSharp, 
       bookmarkOutline, 
+      helpCircleOutline,
       bookmarkSharp, 
       heartOutline, 
       heartSharp, 
