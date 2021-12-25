@@ -52,7 +52,7 @@ export default defineComponent({
     IonSplitPane,
   },
   setup() {
-    const checked = 'Home';
+    var checked = 'Grupo';
     const selectedIndex = ref(0);
     const appPages = [
       {
