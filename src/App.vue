@@ -28,16 +28,31 @@
       <ion-router-outlet id="main-content"></ion-router-outlet>
     </ion-split-pane>
   </ion-app>
+  <ion-page>
+
+  </ion-page>
 </template>
 
 <script lang="ts">
-import { IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
+import { IonContent, IonPage, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
 import { peopleOutline, homeOutline, helpCircleOutline } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
-
+ionViewDidEnter() {
+    console.log('Home page did enter');
+  },
+  ionViewDidLeave() {
+    console.log('Home page did leave');
+  },
+  ionViewWillEnter() {
+    console.log('Home page will enter');
+  },
+  ionViewWillLeave() {
+    console.log('Home page will leave');
+  },
   components: {
+    IonPage,
     IonContent, 
     IonIcon, 
     IonItem, 
