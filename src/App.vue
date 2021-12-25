@@ -36,12 +36,9 @@ import { defineComponent, ref } from 'vue';
 import { peopleOutline, homeOutline, helpCircleOutline, archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
-  ionViewDidEnter(){
-      setInterval(()=> {
-          this.contador ++;
-      }, 1000)
-      window.alert(this.contador);
-    },
+  ionViewDidEnter() {
+    this.checked = 'Home';
+  },
   components: {
     IonApp, 
     IonContent, 
