@@ -5,7 +5,7 @@
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Hola</ion-list-header>
-            <ion-note>Espero que la clase de hoy sea estupenda</ion-note>
+            <ion-note>Espero que la clase de hoy sea estupenda {{contador}}</ion-note>
 
             <ion-menu-toggle auto-hide="false" >
               <ion-item @click="checked = 'Home'" lines="none" class="hydrated" :class="{ selected: checked == 'Home' }">
@@ -33,7 +33,6 @@
 <script lang="ts">
 import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
-import { useRoute } from 'vue-router';
 import { peopleOutline, homeOutline, helpCircleOutline, archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
@@ -53,78 +52,19 @@ export default defineComponent({
   },
   setup() {
     const checked = 'Grupo';
-    const selectedIndex = ref(0);
-    const appPages = [
-      {
-        title: 'Inbox',
-        url: '/folder/Inbox',
-        iosIcon: mailOutline,
-        mdIcon: mailSharp
-      },
-      {
-        title: 'Outbox',
-        url: '/folder/Outbox',
-        iosIcon: paperPlaneOutline,
-        mdIcon: paperPlaneSharp
-      },
-      {
-        title: 'Favorites',
-        url: '/folder/Favorites',
-        iosIcon: heartOutline,
-        mdIcon: heartSharp
-      },
-      {
-        title: 'Archived',
-        url: '/folder/Archived',
-        iosIcon: archiveOutline,
-        mdIcon: archiveSharp
-      },
-      {
-        title: 'Trash',
-        url: '/folder/Trash',
-        iosIcon: trashOutline,
-        mdIcon: trashSharp
-      },
-      {
-        title: 'Spam',
-        url: '/folder/Spam',
-        iosIcon: warningOutline,
-        mdIcon: warningSharp
-      }
-    ];
-    const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-    
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      selectedIndex.value = appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
-    
-    const route = useRoute();
-    
+       
     return { 
       checked,
-      selectedIndex,
-      appPages, 
-      labels,
-      archiveOutline, 
-      archiveSharp,
+      contador: 0,
       peopleOutline, 
       homeOutline,
-      bookmarkOutline, 
-      helpCircleOutline,
-      bookmarkSharp, 
-      heartOutline, 
-      heartSharp, 
-      mailOutline, 
-      mailSharp, 
-      paperPlaneOutline, 
-      paperPlaneSharp, 
-      trashOutline, 
-      trashSharp, 
-      warningOutline, 
-      warningSharp,
-      isSelected: (url: string) => url === route.path ? 'selected' : ''
+      helpCircleOutline
     }
+  },
+  mounted(){
+    setInterval(()=>{
+      this.contador ++;
+    }, 1000)
   }
 });
 </script>
