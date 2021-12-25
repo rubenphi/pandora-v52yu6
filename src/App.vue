@@ -9,7 +9,7 @@
 
             <ion-menu-toggle auto-hide="false" >
               <ion-item  lines="none" detail="false" class="hydrated selected" >
-                <ion-icon slot="start" :ios="help-circle-outline" :md="help-circle-outline"></ion-icon>
+                <ion-icon slot="start" :ios="homeOutline" :md="homeOutline"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
               <ion-item  lines="none" detail="false" class="hydrated" >
@@ -30,7 +30,7 @@
 import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
-import { helpCircleOutline, archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { homeOutline, helpCircleOutline, archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
   components: {
@@ -102,6 +102,7 @@ export default defineComponent({
       labels,
       archiveOutline, 
       archiveSharp, 
+      homeOutline,
       bookmarkOutline, 
       helpCircleOutline,
       bookmarkSharp, 
