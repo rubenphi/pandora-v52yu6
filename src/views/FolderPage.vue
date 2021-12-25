@@ -50,8 +50,7 @@ export default defineComponent({
   },
   methods:{
     ionViewDidEnter() {
-    setInterval(()=>{
-      this.contador = this.contador + 1;
+    this.contador = setInterval(()=>{ this.contador ++
     }, 1000)
     console.log(this.contador);
   },
