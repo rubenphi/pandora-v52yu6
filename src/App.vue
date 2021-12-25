@@ -32,9 +32,9 @@
 
 <script lang="ts">
 import { IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
-import { IonPage, onIonViewDidEnter } from '@ionic/vue';
+import { IonPage, onIonViewWillEnter, onIonViewDidEnter, onIonViewWillLeave, onIonViewDidLeave } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
-import { peopleOutline, homeOutline, helpCircleOutline, archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { peopleOutline, homeOutline, helpCircleOutline } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
   
@@ -57,6 +57,21 @@ export default defineComponent({
     let checked = 'Grupo';
     onIonViewDidEnter(() => {
       checked = 'Home';
+    });
+    onIonViewDidEnter(() => {
+      checked = 'Cuestionarios';
+    });
+
+    onIonViewDidLeave(() => {
+      checked = 'Cuestionarios';
+    });
+
+    onIonViewWillEnter(() => {
+      checked = 'Home';
+    });
+
+    onIonViewWillLeave(() => {
+      checked = 'Grupo';
     });
     return { 
       checked,
