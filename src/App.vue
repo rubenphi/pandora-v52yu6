@@ -13,7 +13,7 @@
                 <ion-label>Home</ion-label>
               </ion-item>
               <ion-item  lines="none" detail="false" class="hydrated" >
-                <ion-icon :icon="helpCircleOutline"></ion-icon>
+                <ion-icon slot="start" :icon="helpCircleOutline"></ion-icon>
                 <ion-label>Cuestionarios</ion-label>
               </ion-item>
             </ion-menu-toggle>
