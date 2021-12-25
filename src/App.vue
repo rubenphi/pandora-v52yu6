@@ -50,6 +50,14 @@ export default defineComponent({
     IonRouterOutlet, 
     IonSplitPane,
   },
+    methods: {
+    ionViewDidEnter(){
+      setInterval(()=> {
+          this.contador ++;
+      }, 1000)
+    },
+
+  },
   setup() {
     const checked = 'Grupo';
        
@@ -60,11 +68,6 @@ export default defineComponent({
       homeOutline,
       helpCircleOutline
     }
-  },
-  mounted(){
-    setInterval(()=>{
-      this.contador ++;
-    }, 1000)
   }
 });
 </script>
