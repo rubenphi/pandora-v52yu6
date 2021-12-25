@@ -4,25 +4,21 @@
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
-            <ion-list-header>Inbox</ion-list-header>
-            <ion-note>hi@ionicframework.com</ion-note>
+            <ion-list-header>Fulanito</ion-list-header>
+            <ion-note>902</ion-note>
 
-            <ion-menu-toggle auto-hide="false" v-for="(p, i) in appPages" :key="i">
-              <ion-item @click="selectedIndex = i" router-direction="root" :router-link="p.url" lines="none" detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
-                <ion-icon slot="start" :ios="p.iosIcon" :md="p.mdIcon"></ion-icon>
-                <ion-label>{{ p.title }}</ion-label>
+            <ion-menu-toggle auto-hide="false" >
+              <ion-item  lines="none" detail="false" class="hydrated" >
+                <ion-icon slot="start" ></ion-icon>
+                <ion-label>Home</ion-label>
+              </ion-item>
+              <ion-item  lines="none" detail="false" class="hydrated" >
+                <ion-icon slot="start" ></ion-icon>
+                <ion-label>Cuestionarios</ion-label>
               </ion-item>
             </ion-menu-toggle>
           </ion-list>
 
-          <ion-list id="labels-list">
-            <ion-list-header>Labels</ion-list-header>
-
-            <ion-item v-for="(label, index) in labels" lines="none" :key="index">
-              <ion-icon slot="start" :ios="bookmarkOutline" :md="bookmarkSharp"></ion-icon>
-              <ion-label>{{ label }}</ion-label>
-            </ion-item>
-          </ion-list>
         </ion-content>
       </ion-menu>
       <ion-router-outlet id="main-content"></ion-router-outlet>
