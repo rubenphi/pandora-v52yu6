@@ -55,10 +55,10 @@ export default defineComponent({
   },
     
   setup() {
-    const checked = 'Grupo';
+    
        
     return { 
-      checked,
+      checked: 'Grupo',
       contador: 0,
       peopleOutline, 
       homeOutline,
