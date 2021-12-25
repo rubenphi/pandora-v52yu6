@@ -9,7 +9,7 @@
 
             <ion-menu-toggle auto-hide="false" >
               <ion-item  lines="none" detail="false" class="hydrated selected" >
-                <ion-icon name="help-circle-outline" lot="start" "" ios="p.iosIcon" md="p.mdIcon"></ion-icon>
+                <ion-icon name="help-circle-outline" lot="start" "" ios="iosIcon" md="mdIcon"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
               <ion-item  lines="none" detail="false" class="hydrated" >
