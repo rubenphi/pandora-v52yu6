@@ -32,14 +32,12 @@
 
 <script lang="ts">
 import { IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
-import { IonPage } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
 import { peopleOutline, homeOutline, helpCircleOutline } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
 
   components: {
-    IonPage, 
     IonContent, 
     IonIcon, 
     IonItem, 
