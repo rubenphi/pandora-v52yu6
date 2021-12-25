@@ -5,7 +5,7 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>{{ $route.params.id }}</ion-title>
+        <ion-title>Pandora</ion-title>
       </ion-toolbar>
     </ion-header>
     
@@ -17,8 +17,8 @@
       </ion-header>
     
       <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">De Pandora</a></p>
+        <strong class="capitalize">Bienvenido a Pandora</strong>
+        <p>La aplicación pandora fue diseñada para permitir la participación simultanea y en grupo para las asignaturas de lengua castellana. </p>
       </div>
     </ion-content>
   </ion-page>

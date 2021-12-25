@@ -4,8 +4,8 @@
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
-            <ion-list-header>Fulanito</ion-list-header>
-            <ion-note>902</ion-note>
+            <ion-list-header>Hola</ion-list-header>
+            <ion-note>Espero que la clase de hoy sea estupenda</ion-note>
 
             <ion-menu-toggle auto-hide="false" >
               <ion-item  lines="none" detail="false" class="hydrated selected" >
