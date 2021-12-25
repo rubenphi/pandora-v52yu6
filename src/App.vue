@@ -9,7 +9,7 @@
 
             <ion-menu-toggle auto-hide="false" >
               <ion-item  lines="none" detail="false" class="hydrated selected" >
-                <ion-icon :icon="star" slot="start"></ion-icon>
+                <ion-icon slot="start" :ios="home" :md="home"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
               <ion-item  lines="none" detail="false" class="hydrated" >
