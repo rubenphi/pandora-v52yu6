@@ -53,12 +53,13 @@ export default defineComponent({
     setInterval(()=>{
       this.contador ++;
     }, 1000)
+    console.log(this.contador);
   },
   ionViewDidLeave() {
     console.log('Home page did leave');
   },
   ionViewWillEnter() {
-    console.log('Home page will enter');
+   console.log(this.contador);
   },
   ionViewWillLeave() {
     console.log('Home page will leave');
