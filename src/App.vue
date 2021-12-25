@@ -8,15 +8,15 @@
             <ion-note>Espero que la clase de hoy sea estupenda</ion-note>
 
             <ion-menu-toggle auto-hide="false" >
-              <ion-item  lines="none" detail="false" class="hydrated selected" >
+              <ion-item @click="selectedIndex = i" lines="none" class="hydrated" :class="{ selected: selectedIndex === i }">
                 <ion-icon slot="start" :icon="homeOutline"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
-              <ion-item  lines="none" detail="false" class="hydrated" >
+              <ion-item @click="selectedIndex = i" lines="none" class="hydrated" :class="{ selected: selectedIndex === i }">
                 <ion-icon slot="start" :icon="peopleOutline"></ion-icon>
                 <ion-label>Grupo</ion-label>
               </ion-item>
-              <ion-item  lines="none" detail="false" class="hydrated" >
+              <ion-item @click="selectedIndex = i" lines="none" detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
                 <ion-icon slot="start" :icon="helpCircleOutline"></ion-icon>
                 <ion-label>Cuestionarios</ion-label>
               </ion-item>
