@@ -26,8 +26,23 @@
 
 <script lang="ts">
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { defineComponent } from 'vue';
 
-export default {
+
+export default defineComponent({
+  name: 'Home',
+  ionViewDidEnter() {
+    console.log('Home page did enter');
+  },
+  ionViewDidLeave() {
+    console.log('Home page did leave');
+  },
+  ionViewWillEnter() {
+    console.log('Home page will enter');
+  },
+  ionViewWillLeave() {
+    console.log('Home page will leave');
+  },
   components: {
     IonButtons,
     IonContent,
@@ -37,7 +52,7 @@ export default {
     IonTitle,
     IonToolbar
   }
-}
+});
 </script>
 
 <style scoped>

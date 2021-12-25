@@ -1,5 +1,5 @@
 <template>
-  <ion-page>
+<ion-app>
     <ion-split-pane content-id="main-content">
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
@@ -27,7 +27,7 @@
       </ion-menu>
       <ion-router-outlet id="main-content"></ion-router-outlet>
     </ion-split-pane>
-  </ion-page>
+  </ion-app>
 </template>
 
 <script lang="ts">
@@ -37,18 +37,7 @@ import { defineComponent, ref } from 'vue';
 import { peopleOutline, homeOutline, helpCircleOutline } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
- ionViewDidEnter() {
-    console.log('Home page did enter');
-  },
-  ionViewDidLeave() {
-    console.log('Home page did leave');
-  },
-  ionViewWillEnter() {
-    console.log('Home page will enter');
-  },
-  ionViewWillLeave() {
-    console.log('Home page will leave');
-  },
+
   components: {
     IonPage, 
     IonContent, 
