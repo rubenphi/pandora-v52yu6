@@ -18,7 +18,10 @@
     
       <div id="container">
         <strong class="capitalize">Bienvenido a Pandora</strong>
-        <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. </p>
+        <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. 
+
+          {{contador}}
+        </p>
       </div>
     </ion-content>
   </ion-page>
@@ -30,7 +33,23 @@ import { defineComponent } from 'vue';
 
 
 export default defineComponent({
-  ionViewDidEnter() {
+  components: {
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonMenuButton,
+    IonPage,
+    IonTitle,
+    IonToolbar
+  },
+    setup() {
+   let checked = 'Grupo';
+    return { 
+      contador: 0,
+    }
+  },
+  methods:{
+    ionViewDidEnter() {
     console.log('Home page did enter');
   },
   ionViewDidLeave() {
@@ -41,15 +60,7 @@ export default defineComponent({
   },
   ionViewWillLeave() {
     console.log('Home page will leave');
-  },
-  components: {
-    IonButtons,
-    IonContent,
-    IonHeader,
-    IonMenuButton,
-    IonPage,
-    IonTitle,
-    IonToolbar
+  }
   }
 });
 </script>

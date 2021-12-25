@@ -5,7 +5,7 @@
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Hola</ion-list-header>
-            <ion-note>Espero que la clase de hoy sea estupenda {{contador}}</ion-note>
+            <ion-note>Espero que la clase de hoy sea estupenda </ion-note>
 
             <ion-menu-toggle auto-hide="false" >
               <ion-item @click="checked = 'Home'" lines="none" class="hydrated" :class="{ selected: checked == 'Home' }">
@@ -58,7 +58,6 @@ export default defineComponent({
    let checked = 'Home';
     return { 
       checked,
-      contador: 0,
       peopleOutline, 
       homeOutline,
       helpCircleOutline
