@@ -18,7 +18,7 @@
     
       <div id="container">
         <strong class="capitalize">Bienvenido a Pandora</strong>
-        <p>La aplicación pandora fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. </p>
+        <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. </p>
       </div>
     </ion-content>
   </ion-page>
