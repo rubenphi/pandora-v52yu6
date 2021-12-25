@@ -8,15 +8,15 @@
             <ion-note>Espero que la clase de hoy sea estupenda</ion-note>
 
             <ion-menu-toggle auto-hide="false" >
-              <ion-item @click="checked = 'Home'" lines="none" class="hydrated" :class="{ selected: checked === 'Home' }">
+              <ion-item @click="checked = 'Home'" lines="none" class="hydrated" :class="{ selected: checked == 'Home' }">
                 <ion-icon slot="start" :icon="homeOutline"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
-              <ion-item @click="checked = 'Grupo'" lines="none" class="hydrated" :class="{ selected: selectedIndex === 'Grupo' }">
+              <ion-item @click="checked = 'Grupo'" lines="none" class="hydrated" :class="{ selected: checked == 'Grupo' }">
                 <ion-icon slot="start" :icon="peopleOutline"></ion-icon>
                 <ion-label>Grupo</ion-label>
               </ion-item>
-              <ion-item @click="checked = 'Cuestionarios'" lines="none" detail="false" class="hydrated" :class="{ selected: selectedIndex === 'Cuestionarios' }">
+              <ion-item @click="checked = 'Cuestionarios'" lines="none"  class="hydrated" :class="{ selected: checked == 'Cuestionarios' }">
                 <ion-icon slot="start" :icon="helpCircleOutline"></ion-icon>
                 <ion-label>Cuestionarios</ion-label>
               </ion-item>
@@ -52,10 +52,60 @@ export default defineComponent({
     IonSplitPane,
   },
   setup() {
+    const checked = 'Grupo';
+    const selectedIndex = ref(0);
+    const appPages = [
+      {
+        title: 'Inbox',
+        url: '/folder/Inbox',
+        iosIcon: mailOutline,
+        mdIcon: mailSharp
+      },
+      {
+        title: 'Outbox',
+        url: '/folder/Outbox',
+        iosIcon: paperPlaneOutline,
+        mdIcon: paperPlaneSharp
+      },
+      {
+        title: 'Favorites',
+        url: '/folder/Favorites',
+        iosIcon: heartOutline,
+        mdIcon: heartSharp
+      },
+      {
+        title: 'Archived',
+        url: '/folder/Archived',
+        iosIcon: archiveOutline,
+        mdIcon: archiveSharp
+      },
+      {
+        title: 'Trash',
+        url: '/folder/Trash',
+        iosIcon: trashOutline,
+        mdIcon: trashSharp
+      },
+      {
+        title: 'Spam',
+        url: '/folder/Spam',
+        iosIcon: warningOutline,
+        mdIcon: warningSharp
+      }
+    ];
+    const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
     
+    const path = window.location.pathname.split('folder/')[1];
+    if (path !== undefined) {
+      selectedIndex.value = appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    }
     
+    const route = useRoute();
     
     return { 
+      checked,
+      selectedIndex,
+      appPages, 
+      labels,
       archiveOutline, 
       archiveSharp,
       peopleOutline, 
@@ -73,7 +123,7 @@ export default defineComponent({
       trashSharp, 
       warningOutline, 
       warningSharp,
-     
+      isSelected: (url: string) => url === route.path ? 'selected' : ''
     }
   }
 });
