@@ -9,6 +9,10 @@
 
             <ion-menu-toggle auto-hide="false" >
               <ion-item  lines="none" detail="false" class="hydrated selected" >
+                <ion-icon slot="start" :icon="homeOutline"></ion-icon>
+                <ion-label>Home</ion-label>
+              </ion-item>
+              <ion-item  lines="none" detail="false" class="hydrated" >
                 <ion-icon slot="start" :icon="peopleOutline"></ion-icon>
                 <ion-label>Grupo</ion-label>
               </ion-item>
