@@ -1,5 +1,5 @@
 <template>
-  <ion-app>
+  <ion-page>
     <ion-split-pane content-id="main-content">
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
@@ -27,19 +27,19 @@
       </ion-menu>
       <ion-router-outlet id="main-content"></ion-router-outlet>
     </ion-split-pane>
-  </ion-app>
+  </ion-page>
 </template>
 
 <script lang="ts">
-import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
-import { onIonViewDidEnter } from '@ionic/vue';
+import { IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
+import { IonPage, onIonViewDidEnter } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
 import { peopleOutline, homeOutline, helpCircleOutline, archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
   
   components: {
-    IonApp, 
+    IonPage, 
     IonContent, 
     IonIcon, 
     IonItem, 
