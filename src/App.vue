@@ -54,7 +54,7 @@ export default defineComponent({
   },
     
   setup() {
-    let checked = 'Grupo';
+    let checked = 'Home';
     onIonViewDidEnter(() => {
       checked = 'Home';
     });
