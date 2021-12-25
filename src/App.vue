@@ -8,7 +8,7 @@
             <ion-note>902</ion-note>
 
             <ion-menu-toggle auto-hide="false" >
-              <ion-item  lines="none" detail="false" class="hydrated" class="selected" >
+              <ion-item  lines="none" detail="false" class="hydrated selected" >
                 <ion-icon name="home-outline"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
