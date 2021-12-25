@@ -52,7 +52,6 @@ export default defineComponent({
     IonSplitPane,
   },
   setup() {
-    var checked = 'Grupo';
     const selectedIndex = ref(0);
     const appPages = [
       {
@@ -102,7 +101,7 @@ export default defineComponent({
     const route = useRoute();
     
     return { 
-      checked,
+      checked: 'Home',
       selectedIndex,
       appPages, 
       labels,
