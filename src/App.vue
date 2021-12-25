@@ -58,10 +58,6 @@ export default defineComponent({
     onIonViewDidEnter(() => {
       checked = 'Home';
     });
-    onIonViewDidEnter(() => {
-      checked = 'Cuestionarios';
-    });
-
     onIonViewDidLeave(() => {
       checked = 'Cuestionarios';
     });
