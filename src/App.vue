@@ -37,18 +37,17 @@ import { defineComponent, ref } from 'vue';
 import { peopleOutline, homeOutline, helpCircleOutline } from 'ionicons/icons';
 export default defineComponent({
   name: 'App',
-  
-  ionViewDidEnter() {
-    alert('Home page did enter');
+ ionViewDidEnter() {
+    console.log('Home page did enter');
   },
   ionViewDidLeave() {
-    alert('Home page did leave');
+    console.log('Home page did leave');
   },
   ionViewWillEnter() {
-    alert('Home page will enter');
+    console.log('Home page will enter');
   },
   ionViewWillLeave() {
-    alert('Home page will leave');
+    console.log('Home page will leave');
   },
   components: {
     IonPage, 
