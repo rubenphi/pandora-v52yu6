@@ -55,8 +55,8 @@ export default defineComponent({
       setInterval(()=> {
           this.contador ++;
       }, 1000)
-    },
-
+      window.alert(this.contador);
+    }
   },
   setup() {
     const checked = 'Grupo';
