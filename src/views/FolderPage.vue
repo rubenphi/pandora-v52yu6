@@ -30,7 +30,7 @@ import { defineComponent } from 'vue';
 
 
 export default defineComponent({
-  name: 'Home',
+  name: 'Inicio',
   ionViewDidEnter() {
     console.log('Home page did enter');
   },
