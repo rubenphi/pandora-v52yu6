@@ -5,7 +5,7 @@
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Hola</ion-list-header>
-            <ion-note>Espero que la clase de hoy sea estupenda </ion-note>
+            <ion-note>Espero que la clase de hoy sea estupenda {{ dato }} </ion-note>
 
             <ion-menu-toggle auto-hide="false" >
               <ion-item @click="checked()" lines="none" class="hydrated" >
@@ -55,10 +55,12 @@ export default defineComponent({
   },
     
   setup() {
+   const data = ref('holi')
    const checked = async () => {
-        console.log('hola mundo');
+        data.value = 'nada'
         };
     return { 
+      dato: data.value,
       checked,
       peopleOutline, 
       homeOutline,
