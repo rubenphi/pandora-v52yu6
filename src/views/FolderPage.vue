@@ -43,19 +43,21 @@ export default defineComponent({
     IonToolbar
   },
     setup() {
+      let contador = 0;
+      setInterval( () => contador ++ , 1000 );
     return { 
-      contador: 0
+      contador
     }
   },
   methods:{
     ionViewDidEnter() {
-    setInterval( () => console.log(this.contador ++) , 1000 );
+   // setInterval( () => console.log(this.contador ++) , 1000 );
   },
   ionViewDidLeave() {
     console.log('Home page did leave');
   },
   ionViewWillEnter() {
-   this.contador = setInterval( () => this.contador ++ , 1000 );
+   console.log ('hola')
   },
   ionViewWillLeave() {
     console.log('Home page will leave');
