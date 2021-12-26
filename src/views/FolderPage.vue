@@ -33,7 +33,6 @@
 <script lang="ts">
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { defineComponent } from 'vue';
-import { add } from 'ionicons/icons';
 
 
 export default defineComponent({
@@ -50,7 +49,6 @@ export default defineComponent({
     setup() {
       
     return { 
-      add,
       count: 0
     }
   },
