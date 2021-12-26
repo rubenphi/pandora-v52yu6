@@ -20,7 +20,7 @@
         <strong class="capitalize">Bienvenido a Pandora</strong>
         <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. 
 
-          <ion-button @click="increment">añadir</ion-button>
+          <ion-button (click)="increment">añadir</ion-button>
 
           
     {{ count }}
