@@ -16,7 +16,7 @@
         </ion-toolbar>
       </ion-header>
     
-      <div id="container">
+
         <strong class="capitalize">Bienvenido a Pandora</strong>
         <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. 
 
@@ -25,7 +25,7 @@
           
     {{ count }}
         </p>
-      </div>
+     
     </ion-content>
   </ion-page>
 </template>
