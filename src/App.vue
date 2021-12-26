@@ -8,15 +8,15 @@
             <ion-note>Espero que la clase de hoy sea estupenda </ion-note>
 
             <ion-menu-toggle auto-hide="false" >
-              <ion-item @click="checked = 'Home'" lines="none" class="hydrated" :class="{ selected: checked == 'Home' }">
+              <ion-item @click="checked()" lines="none" class="hydrated" >
                 <ion-icon slot="start" :icon="homeOutline"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
-              <ion-item @click="checked = 'Grupo'" lines="none" class="hydrated" :class="{ selected: checked == 'Grupo' }">
+              <ion-item  lines="none" class="hydrated" >
                 <ion-icon slot="start" :icon="peopleOutline"></ion-icon>
                 <ion-label>Grupo</ion-label>
               </ion-item>
-              <ion-item @click="checked = 'Cuestionarios'" lines="none"  class="hydrated" :class="{ selected: checked == 'Cuestionarios' }">
+              <ion-item  lines="none"  class="hydrated" >
                 <ion-icon slot="start" :icon="helpCircleOutline"></ion-icon>
                 <ion-label>Cuestionarios</ion-label>
               </ion-item>
@@ -55,7 +55,9 @@ export default defineComponent({
   },
     
   setup() {
-   const checked = ref(console.log('hola'));
+   const checked = async () => {
+        console.log('hola mundo');
+        };
     return { 
       checked,
       peopleOutline, 
