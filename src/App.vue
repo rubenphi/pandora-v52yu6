@@ -8,7 +8,7 @@
             <ion-note>Espero que la clase de hoy sea estupenda {{ dato }} </ion-note>
 
             <ion-menu-toggle auto-hide="false" >
-              <ion-item @click="checked()" lines="none" class="hydrated" >
+             <ion-item @click="checked()"  lines="none" detail="false" class="hydrated" >
                 <ion-icon slot="start" :icon="homeOutline"></ion-icon>
                 <ion-label>Home</ion-label>
               </ion-item>
