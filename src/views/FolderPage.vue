@@ -31,13 +31,13 @@
 </template>
 
 <script lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 
 export default defineComponent({
   components: {
-    IonButtons,
+    IonButton,
     IonContent,
     IonHeader,
     IonMenuButton,
