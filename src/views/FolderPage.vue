@@ -20,9 +20,9 @@
         <strong class="capitalize">Bienvenido a Pandora</strong>
         <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. 
 
-         <button @click="count++">increment</button>
-    <button @click="count--">decrement</button>
-    <p>{{ count }}</p>
+         <button @click="count = count + 1">increment</button>
+    <button @click="count = count - 1">decrement</button>
+    {{ count }}
         </p>
       </div>
     </ion-content>
