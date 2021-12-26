@@ -60,7 +60,7 @@ export default defineComponent({
         data.value = 'nada'
         };
     return { 
-      dato: data.value,
+      dato: data,
       checked,
       peopleOutline, 
       homeOutline,
