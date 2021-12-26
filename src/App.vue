@@ -55,7 +55,7 @@ export default defineComponent({
   },
     
   setup() {
-   const checked = ref('Home');
+   const checked = ref(console.log('hola'));
     return { 
       checked,
       peopleOutline, 
