@@ -20,8 +20,12 @@
         <strong class="capitalize">Bienvenido a Pandora</strong>
         <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. 
 
-         <button @click="count = count + 1">increment</button>
-    <button @click="count = count - 1">decrement</button>
+ <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button @click="increment">
+          <ion-icon :icon="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+          
     {{ count }}
         </p>
       </div>
@@ -32,6 +36,7 @@
 <script lang="ts">
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { defineComponent } from 'vue';
+import { add } from 'ionicons/icons';
 
 
 export default defineComponent({
@@ -48,10 +53,17 @@ export default defineComponent({
     setup() {
       
     return { 
+      add,
       count: 0
     }
   },
   methods:{
+   increment() {
+      this.count++;
+    },
+    decrement() {
+      this.count--;
+    },
    ionViewWillEnter() {
       setInterval( () => console.log(this.count), 1000 );
   },
