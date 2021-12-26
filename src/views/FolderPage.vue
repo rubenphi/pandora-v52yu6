@@ -43,9 +43,8 @@ export default defineComponent({
     IonToolbar
   },
     setup() {
-   let contador = 0;
     return { 
-      contador
+      contador: 0
     }
   },
   methods:{
