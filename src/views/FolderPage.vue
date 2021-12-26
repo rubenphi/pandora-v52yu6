@@ -43,16 +43,14 @@ export default defineComponent({
     IonToolbar
   },
     setup() {
-   let checked = 'Grupo';
+   let contador = 0;
     return { 
-      contador: 0,
+      contador
     }
   },
   methods:{
     ionViewDidEnter() {
-    setInterval(()=>{ this.contador ++
-    }, 1000)
-    console.log(this.contador);
+    setInterval( () => this.contador ++, 1000 );
   },
   ionViewDidLeave() {
     console.log('Home page did leave');
