@@ -53,7 +53,7 @@ export default defineComponent({
   },
   methods:{
    ionViewWillEnter() {
-      // setInterval( () => +1 , 1000 );
+      setInterval( () => console.log(this.count), 1000 );
   },
     
     ionViewDidEnter() {
