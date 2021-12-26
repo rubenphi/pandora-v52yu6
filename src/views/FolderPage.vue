@@ -20,7 +20,9 @@
         <strong class="capitalize">Bienvenido a Pandora</strong>
         <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. 
 
-          {{contador}}
+         <button @click="count++">increment</button>
+    <button @click="count--">decrement</button>
+    <p>{{ count }}</p>
         </p>
       </div>
     </ion-content>
@@ -42,23 +44,25 @@ export default defineComponent({
     IonTitle,
     IonToolbar
   },
+  
     setup() {
-      let contador = 0;
-      setInterval( () => contador ++ , 1000 );
+      
     return { 
-      contador
+      count: 0
     }
   },
   methods:{
+   ionViewWillEnter() {
+      // setInterval( () => +1 , 1000 );
+  },
+    
     ionViewDidEnter() {
    // setInterval( () => console.log(this.contador ++) , 1000 );
   },
   ionViewDidLeave() {
     console.log('Home page did leave');
   },
-  ionViewWillEnter() {
-   console.log ('hola')
-  },
+  
   ionViewWillLeave() {
     console.log('Home page will leave');
   }
