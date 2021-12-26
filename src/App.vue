@@ -1,7 +1,7 @@
 <template>
 <ion-app>
-    <ion-split-pane content-id="main-content">
-      <ion-menu content-id="main-content" type="overlay">
+    <ion-split-pane >
+      <ion-menu type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Hola</ion-list-header>
