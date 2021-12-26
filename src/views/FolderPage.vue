@@ -9,7 +9,7 @@
       </ion-toolbar>
     </ion-header>
     
-    <ion-content :fullscreen="true">
+    <ion-content :fullscreen="true" ref="content">
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Pandora</ion-title>
@@ -19,8 +19,7 @@
 
         <strong class="capitalize">Bienvenido a Pandora</strong>
         <p>La aplicación fue diseñada para permitir la participación simultanea y por grupos para la asignatura de lengua castellana. 
-
-          <ion-button @click="increment()">añadir</ion-button>
+              <ion-button @click="scrollToBottom">Scroll to Bottom</ion-button>
 
           
     {{ count }}
@@ -32,7 +31,7 @@
 
 <script lang="ts">
 import { IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { defineComponent , ref } from 'vue';
 
 
 export default defineComponent({
@@ -47,9 +46,15 @@ export default defineComponent({
   },
   
     setup() {
-      
+    let count = 0;
+    const content = ref();
+      const scrollToBottom = () => {
+        content.value.$el.scrollToBottom(300);
+        count++;
+      };
     return { 
-      count: 0
+      scrollToBottom ,
+      count
     }
   },
   methods:{
